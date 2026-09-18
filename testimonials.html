@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Read customer reviews and stories for Sangeet Bakery and Sweets in VK Puram and Ambasamudram. 4.9-star rating for custom birthday cakes, pure ghee sweets, and tea-time savouries.">
+    <title>Customer Testimonials & Reviews | Sangeet Bakery and Sweets</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="alternate icon" type="image/jpeg" href="assets/cake-logo.jpg">
+    <link rel="apple-touch-icon" href="assets/cake-logo.jpg">
+
+    <!-- Fonts & icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+        <div class="preloader__inner">
+            <img src="assets/cake-logo.jpg" alt="Sangeet Bakery Logo" class="preloader__logo-img">
+            <span class="preloader__text">Sangeet Bakery And Sweets</span>
+        </div>
+    </div>
+
+    <!-- 1. Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar__container">
+            <a href="index.html" class="navbar__logo" aria-label="Sangeet Bakery And Sweets — home">
+                <img src="assets/cake-logo.jpg" alt="Sangeet Bakery and Sweets Logo" class="navbar__logo-img">
+                <span class="navbar__logo-text">Sangeet <em>Bakery &amp; Sweets</em></span>
+            </a>
+
+            <nav class="navbar__nav" id="nav-menu" aria-label="Primary navigation">
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
+                    <li class="navbar__item"><a href="about.html" class="navbar__link">About</a></li>
+                    <li class="navbar__item"><a href="menu.html" class="navbar__link">Menu</a></li>
+                    <li class="navbar__item"><a href="gallery.html" class="navbar__link">Gallery</a></li>
+                    <li class="navbar__item"><a href="testimonials.html" class="navbar__link is-active">Testimonials</a></li>
+                    <li class="navbar__item"><a href="contact.html" class="navbar__link">Contact</a></li>
+                </ul>
+                <a href="#reserve" class="btn btn--small navbar__cta" data-open-reservation>Custom Order</a>
+            </nav>
+
+            <button class="navbar__toggle" id="nav-toggle" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="nav-menu">
+                <span class="navbar__toggle-bar"></span>
+                <span class="navbar__toggle-bar"></span>
+                <span class="navbar__toggle-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero page-hero--testimonials">
+            <div class="container">
+                <div class="page-hero__breadcrumbs reveal reveal--fade-up">
+                    <a href="index.html">Home</a>
+                    <span class="separator"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i></span>
+                    <span>Testimonials</span>
+                </div>
+                <h1 class="page-hero__title reveal reveal--fade-up" style="--reveal-delay:.1s">
+                    Stories From <em>Our Patrons</em>
+                </h1>
+                <p class="page-hero__lead reveal reveal--fade-up" style="--reveal-delay:.2s">
+                    Discover why families, colleges, and party hosts across Vickramasingapuram and Ambasamudram trust Sangeet Bakery for their most cherished milestones.
+                </p>
+            </div>
+        </section>
+
+        <!-- Ratings Dashboard & Testimonials Grid -->
+        <section class="section testimonials-page" style="padding-top: var(--space-6);">
+            <div class="container">
+
+                <!-- Overall Rating Card -->
+                <div class="rating-overview reveal reveal--fade-up">
+                    <div class="rating-score">
+                        <div class="rating-number">4.9</div>
+                        <div class="rating-stars" aria-label="5 out of 5 stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="rating-count">Based on 500+ local customer reviews</p>
+                    </div>
+
+                    <div class="rating-stats-grid">
+                        <div class="rating-stat-card">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Pure Ghee in Traditional Sweets</div>
+                        </div>
+                        <div class="rating-stat-card">
+                            <div class="stat-number">15,000+</div>
+                            <div class="stat-label">Celebration Cakes Baked</div>
+                        </div>
+                        <div class="rating-stat-card">
+                            <div class="stat-number">99.4%</div>
+                            <div class="stat-label">On-Time Party Delivery</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category Filter Pills -->
+                <div class="reviews-filter reveal reveal--fade-up" style="margin-top: var(--space-6);">
+                    <button type="button" class="review-filter-pill is-active" data-filter="all">All Reviews</button>
+                    <button type="button" class="review-filter-pill" data-filter="cakes">Celebration Cakes</button>
+                    <button type="button" class="review-filter-pill" data-filter="sweets">Pure Ghee Sweets</button>
+                    <button type="button" class="review-filter-pill" data-filter="fastfood">Savouries &amp; Fast Food</button>
+                    <button type="button" class="review-filter-pill" data-filter="delivery">Party Orders &amp; Delivery</button>
+                </div>
+
+                <!-- Reviews Grid -->
+                <div class="reviews-grid" style="margin-top: var(--space-6);">
+
+                    <!-- Review 1 -->
+                    <article class="review-card reveal reveal--fade-up" data-category="cakes" style="--reveal-delay:.1s">
+                        <div class="review-card__header">
+                            <div class="review-card__stars" aria-label="5 stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="review-card__tag">Custom Birthday Cake</span>
+                        </div>
+                        <p class="review-card__text">
+                            "We ordered a 2 kg Spiderman theme cake for my son’s 5th birthday in VK Puram. The finishing was top class, matching the reference photo exactly, and the fresh cream was light and perfectly balanced without being overly sweet. All guests loved it!"
+                        </p>
+                        <div class="review-card__author">
+                            <img src="assets/testimonials/t1.jpg" alt="Arun Kumar" class="review-card__avatar"
+                                onerror="this.onerror=null;this.src='assets/cake-logo.jpg';">
+                            <div>
+                                <h4 class="review-card__name">Arun Kumar</h4>
+                                <span class="review-card__info"><i class="fa-solid fa-circle-check" style="color: var(--color-caramel);"></i> Verified Customer · VK Puram</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Review 2 -->
+                    <article class="review-card reveal reveal--fade-up" data-category="sweets" style="--reveal-delay:.2s">
+                        <div class="review-card__header">
+                            <div class="review-card__stars" aria-label="5 stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="review-card__tag">Traditional Sweets</span>
+                        </div>
+                        <p class="review-card__text">
+                            "The Mysore Pak here is extraordinary — authentic melt-in-mouth texture with rich, genuine ghee aroma. For Diwali we bought 40 gift boxes for our relatives across Ambasamudram. Outstanding packaging and genuine taste."
+                        </p>
+                        <div class="review-card__author">
+                            <img src="assets/testimonials/t2.jpg" alt="Meenakshi Sundaram" class="review-card__avatar"
+                                onerror="this.onerror=null;this.src='assets/cake-logo.jpg';">
+                            <div>
+                                <h4 class="review-card__name">Meenakshi Sundaram</h4>
+                                <span class="review-card__info"><i class="fa-solid fa-circle-check" style="color: var(--color-caramel);"></i> Verified Customer · Ambasamudram</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Review 3 -->
+                    <article class="review-card reveal reveal--fade-up" data-category="fastfood" style="--reveal-delay:.3s">
+                        <div class="review-card__header">
+                            <div class="review-card__stars" aria-label="5 stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="review-card__tag">Snacks &amp; Savouries</span>
+                        </div>
+                        <p class="review-card__text">
+                            "Our evening hangout spot after work. Their egg samosas and chicken pepper puffs are always piping hot and crisp. Pairing that with South Indian filter coffee is the best comfort food in this entire area."
+                        </p>
+                        <div class="review-card__author">
+                            <img src="assets/testimonials/t3.jpg" alt="Karthik Raja" class="review-card__avatar"
+                                onerror="this.onerror=null;this.src='assets/cake-logo.jpg';">
+                            <div>
+                                <h4 class="review-card__name">Karthik Raja</h4>
+                                <span class="review-card__info"><i class="fa-solid fa-circle-check" style="color: var(--color-caramel);"></i> Regular Patron · Papanasam Road</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Review 4 -->
+                    <article class="review-card reveal reveal--fade-up" data-category="cakes" style="--reveal-delay:.15s">
+                        <div class="review-card__header">
+                            <div class="review-card__stars" aria-label="5 stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="review-card__tag">Anniversary Special</span>
+                        </div>
+                        <p class="review-card__text">
+                            "Ordered a heart-shaped Red Velvet cake for our wedding anniversary. Delivered sharp at 7:30 PM as promised. The cream cheese frosting and rich velvety crumb were hotel-quality. Thank you Sangeet Bakery team!"
+                        </p>
+                        <div class="review-card__author">
+                            <img src="assets/cake-logo.jpg" alt="Priya Dharshini" class="review-card__avatar">
+                            <div>
+                                <h4 class="review-card__name">Priya Dharshini</h4>
+                                <span class="review-card__info"><i class="fa-solid fa-circle-check" style="color: var(--color-caramel);"></i> Verified Customer · VK Puram</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Review 5 -->
+                    <article class="review-card reveal reveal--fade-up" data-category="delivery" style="--reveal-delay:.25s">
+                        <div class="review-card__header">
+                            <div class="review-card__stars" aria-label="5 stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="review-card__tag">Bulk Office Order</span>
+                        </div>
+                        <p class="review-card__text">
+                            "Arranged 60 snack boxes (veg puff, sweet, juice, and samosa) for our hospital annual gathering. Every single box was fresh, warm, and neatly packed. Made our event hosting completely stress-free."
+                        </p>
+                        <div class="review-card__author">
+                            <img src="assets/testimonials/t1.jpg" alt="Dr. S. Ramanathan" class="review-card__avatar"
+                                onerror="this.onerror=null;this.src='assets/cake-logo.jpg';">
+                            <div>
+                                <h4 class="review-card__name">Dr. S. Ramanathan</h4>
+                                <span class="review-card__info"><i class="fa-solid fa-circle-check" style="color: var(--color-caramel);"></i> Corporate Client · Ambasamudram</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Review 6 -->
+                    <article class="review-card reveal reveal--fade-up" data-category="fastfood" style="--reveal-delay:.35s">
+                        <div class="review-card__header">
+                            <div class="review-card__stars" aria-label="5 stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="review-card__tag">Pizza &amp; Milkshakes</span>
+                        </div>
+                        <p class="review-card__text">
+                            "The paneer tikka pizza has generous cheese and flavorful marinated paneer. And their KitKat thick shake is unbeatable on hot afternoons. So glad we have this quality right here in VK Puram!"
+                        </p>
+                        <div class="review-card__author">
+                            <img src="assets/testimonials/t2.jpg" alt="Anitha Selvam" class="review-card__avatar"
+                                onerror="this.onerror=null;this.src='assets/cake-logo.jpg';">
+                            <div>
+                                <h4 class="review-card__name">Anitha Selvam</h4>
+                                <span class="review-card__info"><i class="fa-solid fa-circle-check" style="color: var(--color-caramel);"></i> Verified Customer · VK Puram</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Call to Action Banner -->
+                <div class="menu-highlight-banner reveal reveal--fade-up" style="margin-top: var(--space-8); background: linear-gradient(135deg, var(--color-chocolate), #26140c); border-radius: var(--radius-lg); padding: var(--space-6); color: var(--color-white); text-align: center; box-shadow: var(--shadow-lg);">
+                    <h3 style="font-family: var(--font-head); font-size: clamp(1.6rem, 1.3rem + 1vw, 2.2rem); margin-bottom: var(--space-2); color: var(--color-white);">Celebrate Your Next Milestone With Us</h3>
+                    <p style="color: rgba(255, 255, 255, 0.85); max-width: 620px; margin-inline: auto; margin-bottom: 0; line-height: 1.6;">
+                        Experience the taste that has earned over 500 five-star reviews. Order your dream birthday cake or party box today.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container footer__grid">
+            <div class="footer__brand">
+                <a href="index.html" class="navbar__logo footer__logo">
+                    <img src="assets/cake-logo.jpg" alt="Sangeet Bakery Logo" class="navbar__logo-img">
+                    <span class="navbar__logo-text">Sangeet <em>Bakery &amp; Sweets</em></span>
+                </a>
+                <p class="footer__tagline">
+                    The premier destination in Vickramasingapuram and Ambasamudram for celebration cakes, traditional ghee sweets, and hot evening savouries.
+                </p>
+                <div class="footer__social" aria-label="Social media">
+                    <a href="https://www.instagram.com/sangeetbakeryandsweets/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://wa.me/918825543938" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <nav class="footer__col" aria-label="Quick links">
+                <h3 class="footer__heading">Quick Links</h3>
+                <ul class="footer__list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Our Bakery</a></li>
+                    <li><a href="menu.html">Full Fresh Menu</a></li>
+                    <li><a href="gallery.html">Photo Gallery</a></li>
+                    <li><a href="testimonials.html">Customer Reviews</a></li>
+                    <li><a href="contact.html">Contact &amp; Location</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer__col">
+                <h3 class="footer__heading">Contact &amp; Visit</h3>
+                <ul class="footer__list">
+                    <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 982, Upper Dam Rd, VK Puram 627425</li>
+                    <li><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+918825543938">+91 88255 43938</a></li>
+                    <li><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+919363204830">+91 93632 04830</a></li>
+                    <li><i class="fa-brands fa-instagram" aria-hidden="true"></i> <a href="https://www.instagram.com/sangeetbakeryandsweets/" target="_blank" rel="noopener">@sangeetbakeryandsweets</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h3 class="footer__heading">Hours &amp; Delivery</h3>
+                <ul class="footer__list">
+                    <li>Mon – Sun: <strong>8:30 AM – 10:00 PM</strong></li>
+                    <li>Open All 7 Days</li>
+                    <li>Takeout &amp; Doorstep Delivery</li>
+                    <li class="footer__holiday">VK Puram &amp; Ambasamudram</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p>&copy; <span id="footer-year">2026</span> Sangeet Bakery And Sweets. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Reservation / Order modal -->
+    <div class="modal modal--form" id="reservation-modal" role="dialog" aria-modal="true"
+        aria-labelledby="reservation-title" hidden>
+        <div class="modal__backdrop" data-close-modal></div>
+        <div class="modal__card modal__card--form" role="document">
+            <button class="modal__close" data-close-modal aria-label="Close reservation form"><i
+                    class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+            <div class="modal__body modal__body--form">
+                <p class="section-tag">Inquiry &amp; Order</p>
+                <h3 class="modal__name" id="reservation-title">Custom Cake &amp; Order Inquiry</h3>
+                <p class="modal__desc">Planning a birthday celebration or party order? Send your details or call +91 88255 43938 directly.</p>
+
+                <form id="reservation-form" class="form" novalidate>
+                    <div class="form__row">
+                        <div class="form__field">
+                            <label for="res-name">Full name *</label>
+                            <input type="text" id="res-name" name="name" autocomplete="name" placeholder="Your full name" required>
+                            <span class="form__error" id="res-name-error"></span>
+                        </div>
+                        <div class="form__field">
+                            <label for="res-phone">Phone number *</label>
+                            <input type="tel" id="res-phone" name="phone" autocomplete="tel" placeholder="e.g., +91 88255 43938" maxlength="18" required>
+                            <span class="form__error" id="res-phone-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form__row">
+                        <div class="form__field">
+                            <label for="res-email">Email address *</label>
+                            <input type="email" id="res-email" name="email" autocomplete="email" placeholder="you@example.com" required>
+                            <span class="form__error" id="res-email-error"></span>
+                        </div>
+                        <div class="form__field">
+                            <label for="res-service">Order Service</label>
+                            <select id="res-service" name="service">
+                                <option value="takeout">Takeout / Store Pickup</option>
+                                <option value="delivery">Doorstep Delivery (VK Puram / Ambasamudram)</option>
+                            </select>
+                            <span class="form__error" id="res-service-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form__row">
+                        <div class="form__field">
+                            <label for="res-item">Item / Cake to Order *</label>
+                            <select id="res-item" name="item" required>
+                                <option value="" disabled selected>-- Select an item or cake --</option>
+                                <optgroup label="Cakes &amp; Treats">
+                                    <option value="Custom Birthday Theme Cake">Custom Birthday Theme Cake</option>
+                                    <option value="Classic Black Forest Cake">Classic Black Forest Cake</option>
+                                    <option value="Red Velvet Celebration Pastry">Red Velvet Celebration Pastry / Cake</option>
+                                    <option value="Butterscotch Crunch Cake">Butterscotch Crunch Cake</option>
+                                    <option value="Photo / Cartoon Theme Cake">Photo / Cartoon Theme Cake</option>
+                                    <option value="Multi-Tier Anniversary Cake">Multi-Tier Anniversary Cake</option>
+                                </optgroup>
+                                <optgroup label="Fast Food">
+                                    <option value="Cheesy Paneer Tikka Pizza">Cheesy Paneer Tikka Pizza</option>
+                                    <option value="Crispy Veg Loaded Burger">Crispy Veg Loaded Burger</option>
+                                    <option value="Crispy Chicken Burger">Crispy Chicken Burger</option>
+                                    <option value="Grilled Cheese Club Sandwich">Grilled Cheese Club Sandwich</option>
+                                </optgroup>
+                                <optgroup label="Snacks &amp; Savouries">
+                                    <option value="Crispy Egg Samosas (Party Pack)">Crispy Egg Samosas (Party Pack)</option>
+                                    <option value="Hot Chicken Pepper Puffs">Hot Chicken Pepper Puffs</option>
+                                    <option value="Crispy Vegetable Puffs">Crispy Vegetable Puffs</option>
+                                    <option value="Assorted Tea-Time Savouries">Assorted Tea-Time Savouries</option>
+                                </optgroup>
+                                <optgroup label="Traditional Sweets">
+                                    <option value="Pure Ghee Mysore Pak">Pure Ghee Mysore Pak</option>
+                                    <option value="Tirunelveli Wheat Halwa">Tirunelveli Wheat Halwa</option>
+                                    <option value="Cashew Kaju Katli">Cashew Kaju Katli</option>
+                                    <option value="Assorted Traditional Sweets Box">Assorted Traditional Sweets Box</option>
+                                </optgroup>
+                                <optgroup label="Beverages">
+                                    <option value="KitKat Thick Milkshake">KitKat Thick Milkshake</option>
+                                    <option value="South Indian Filter Coffee">South Indian Filter Coffee</option>
+                                </optgroup>
+                                <option value="Other Custom Order">Other / Custom Order (Specify in Notes)</option>
+                            </select>
+                            <span class="form__error" id="res-item-error"></span>
+                        </div>
+                        <div class="form__field">
+                            <label for="res-guests">Quantity / Weight *</label>
+                            <input type="text" id="res-guests" name="guests" placeholder="e.g., 1 kg / 20 pcs / 2 boxes" value="1 kg" required>
+                            <span class="form__error" id="res-guests-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form__row">
+                        <div class="form__field">
+                            <label for="res-date">Required Date *</label>
+                            <input type="date" id="res-date" name="date" required>
+                            <span class="form__error" id="res-date-error"></span>
+                        </div>
+                        <div class="form__field">
+                            <label for="res-time">Required Time *</label>
+                            <input type="time" id="res-time" name="time" min="08:30" max="22:00" required>
+                            <span class="form__error" id="res-time-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form__field">
+                        <label for="res-notes">Cake Message / Special Instructions (Optional)</label>
+                        <textarea id="res-notes" name="notes" rows="2" placeholder="e.g., Name on cake: 'Happy Birthday Arun', eggless, chocolate flavor, theme photo, or delivery address"></textarea>
+                        <span class="form__error" id="res-notes-error"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn--full btn--whatsapp">
+                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        <span>Submit Inquiry / Order via WhatsApp</span>
+                    </button>
+                    <p class="form__whatsapp-note">
+                        <i class="fa-brands fa-whatsapp" style="color: #25D366;"></i>
+                        Orders are received directly on WhatsApp. Quick confirmation!
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast region -->
+    <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="false"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

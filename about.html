@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Discover the story, craftsmanship, and pure ingredients behind Sangeet Bakery and Sweets in Vickramasingapuram (VK Puram) & Ambasamudram. Watch behind-the-scenes bakery videos and explore our heritage.">
+    <title>About Us | Our Story, Craft & Heritage | Sangeet Bakery and Sweets</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="alternate icon" type="image/jpeg" href="assets/cake-logo.jpg">
+    <link rel="apple-touch-icon" href="assets/cake-logo.jpg">
+
+    <!-- Fonts & icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+        <div class="preloader__inner">
+            <img src="assets/cake-logo.jpg" alt="Sangeet Bakery Logo" class="preloader__logo-img">
+            <span class="preloader__text">Sangeet Bakery And Sweets</span>
+        </div>
+    </div>
+
+    <!-- 1. Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar__container">
+            <a href="index.html" class="navbar__logo" aria-label="Sangeet Bakery And Sweets — home">
+                <img src="assets/cake-logo.jpg" alt="Sangeet Bakery and Sweets Logo" class="navbar__logo-img">
+                <span class="navbar__logo-text">Sangeet <em>Bakery &amp; Sweets</em></span>
+            </a>
+
+            <nav class="navbar__nav" id="nav-menu" aria-label="Primary navigation">
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
+                    <li class="navbar__item"><a href="about.html" class="navbar__link is-active">About</a></li>
+                    <li class="navbar__item"><a href="menu.html" class="navbar__link">Menu</a></li>
+                    <li class="navbar__item"><a href="gallery.html" class="navbar__link">Gallery</a></li>
+                    <li class="navbar__item"><a href="testimonials.html" class="navbar__link">Testimonials</a></li>
+                    <li class="navbar__item"><a href="contact.html" class="navbar__link">Contact</a></li>
+                </ul>
+                <a href="#reserve" class="btn btn--small navbar__cta" data-open-reservation>Custom Order</a>
+            </nav>
+
+            <button class="navbar__toggle" id="nav-toggle" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="nav-menu">
+                <span class="navbar__toggle-bar"></span>
+                <span class="navbar__toggle-bar"></span>
+                <span class="navbar__toggle-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero Banner -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero__breadcrumbs reveal reveal--fade-up">
+                    <a href="index.html">Home</a>
+                    <span class="separator"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i></span>
+                    <span>About Us</span>
+                </div>
+                <h1 class="page-hero__title reveal reveal--fade-up" style="--reveal-delay:.1s">
+                    Baking Memories, <em>Honoring Tradition</em>
+                </h1>
+                <p class="page-hero__lead reveal reveal--fade-up" style="--reveal-delay:.2s">
+                    Serving Vickramasingapuram &amp; Ambasamudram with oven-fresh celebration cakes, traditional pure ghee sweets, and comforting evening savouries baked daily with pride.
+                </p>
+            </div>
+        </section>
+
+        <!-- Our Story / Heritage Section -->
+        <section class="section about-heritage">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-grid__media reveal reveal--slide-left">
+                        <img src="assets/about/about-image-1.jpeg"
+                            alt="Master artisans decorating fresh celebration cakes at Sangeet Bakery"
+                            class="story-grid__img" loading="lazy">
+                    </div>
+                    <div class="story-grid__content reveal reveal--slide-right">
+                        <p class="section-tag">Our Heritage</p>
+                        <h2 class="section-title">Rooted in VK Puram, Loved Across Ambasamudram</h2>
+                        <p class="about__text">
+                            Located at <strong>982, Ambasamudram - Papanasam - Upper Dam Road</strong>, <strong>Sangeet Bakery and Sweets</strong> was founded on a simple, timeless belief: celebrations deserve real ingredients, genuine craftsmanship, and the aroma of baking fresh from the oven every single day.
+                        </p>
+                        <p class="about__text">
+                            What started as a cherished local bakery has grown into a community destination where families gather for evening tea, celebrate birthdays with custom-themed tiered cakes, and share traditional sweets made exclusively with 100% pure ghee during festivals and weddings.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Behind the Scenes Video Showcase -->
+                <div class="video-showcase-section" style="margin-top: var(--space-8);">
+                    <header class="section__header reveal reveal--fade-up">
+                        <p class="section-tag">Behind The Craft</p>
+                        <h2 class="section-title">Inside Our Kitchen &amp; Oven Room</h2>
+                        <p class="section-lead">Watch our master bakers and sweet crafters at work — from hand-whipped cream cakes to sizzling savouries.</p>
+                    </header>
+
+                    <div class="video-grid">
+                        <!-- Video Card 1 -->
+                        <article class="video-card reveal reveal--fade-up" style="--reveal-delay:.1s">
+                            <div class="video-card__player-wrapper">
+                                <video class="video-card__player" controls playsinline preload="metadata"
+                                    poster="assets/cakes/custom-birthday-cake.jpg">
+                                    <source src="assets/about/about-video-1.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <div class="video-card__body">
+                                <span class="video-card__badge"><i class="fa-solid fa-cake-candles"></i> Cake Mastery</span>
+                                <h3 class="video-card__title">Custom Celebration Cake Decoration</h3>
+                                <p class="video-card__desc">Step inside our cake studio as fresh sponge layers are soaked, delicate fresh cream is hand-whipped, and personalized birthday designs come alive.</p>
+                            </div>
+                        </article>
+
+                        <!-- Video Card 2 -->
+                        <article class="video-card reveal reveal--fade-up" style="--reveal-delay:.2s">
+                            <div class="video-card__player-wrapper">
+                                <video class="video-card__player" controls playsinline preload="metadata"
+                                    poster="assets/fastfood/paneer-tikka-pizza.jpg">
+                                    <source src="assets/about/about-video-2.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <div class="video-card__body">
+                                <span class="video-card__badge"><i class="fa-solid fa-fire-burner"></i> Oven Freshness</span>
+                                <h3 class="video-card__title">Stone Hearth Bakes &amp; Fast Food</h3>
+                                <p class="video-card__desc">Watch cheesy hand-tossed pizzas, crispy chicken patties, and flaky hot egg samosas baked fresh throughout the afternoon for tea-time rushes.</p>
+                            </div>
+                        </article>
+
+                        <!-- Video Card 3 -->
+                        <article class="video-card reveal reveal--fade-up" style="--reveal-delay:.3s">
+                            <div class="video-card__player-wrapper">
+                                <video class="video-card__player" controls playsinline preload="metadata"
+                                    poster="assets/sweets/pure-ghee-mysore-pak.jpg">
+                                    <source src="assets/about/about-video-3.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <div class="video-card__body">
+                                <span class="video-card__badge"><i class="fa-solid fa-bowl-food"></i> Sweet Tradition</span>
+                                <h3 class="video-card__title">Pure Desi Ghee Sweet Crafting</h3>
+                                <p class="video-card__desc">Witness the time-honored slow-cooking process of traditional Mysore Pak and rich Tirunelveli wheat halwa using authentic pure ghee.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Story Grid 2: Pure Ingredients -->
+                <div class="story-grid story-grid--reverse" style="margin-top: var(--space-8);">
+                    <div class="story-grid__media reveal reveal--slide-right">
+                        <img src="assets/about/about-image-2.jpg"
+                            alt="Authentic traditional sweet making and pure ghee preparation"
+                            class="story-grid__img" loading="lazy">
+                    </div>
+                    <div class="story-grid__content reveal reveal--slide-left">
+                        <p class="section-tag">Pure Ingredients</p>
+                        <h2 class="section-title">No Shortcuts, Only Uncompromising Quality</h2>
+                        <p class="about__text">
+                            We never use synthetic substitutes or compound syrups. Our cakes are made with genuine fresh cream and farm-fresh dairy. Our traditional South Indian sweets are prepared exclusively with <strong>100% pure desi ghee</strong> that melts the moment it touches your tongue.
+                        </p>
+                        <p class="about__text">
+                            From crispy egg samosas and pepper chicken puffs to our loaded paneer tikka pizzas and burgers, every recipe is tested and perfected for the authentic, comforting taste our patrons expect.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 4 Quality Pillars -->
+                <div style="margin-top: var(--space-8);">
+                    <header class="section__header reveal reveal--fade-up">
+                        <p class="section-tag">Our Promises</p>
+                        <h2 class="section-title">The Four Pillars of Sangeet Bakery</h2>
+                    </header>
+
+                    <div class="pillars-grid">
+                        <article class="pillar-card reveal reveal--fade-up" style="--reveal-delay:.1s">
+                            <div class="pillar-card__icon"><i class="fa-solid fa-seedling"></i></div>
+                            <h3 class="pillar-card__title">100% Pure Ghee</h3>
+                            <p class="pillar-card__text">Every Mysore Pak and wheat halwa batch is prepared with authentic desi ghee for unrivaled rich aroma.</p>
+                        </article>
+
+                        <article class="pillar-card reveal reveal--fade-up" style="--reveal-delay:.2s">
+                            <div class="pillar-card__icon"><i class="fa-solid fa-cake-candles"></i></div>
+                            <h3 class="pillar-card__title">Bespoke Cake Art</h3>
+                            <p class="pillar-card__text">Cartoon themes, photo prints, multi-tiered anniversary bakes, and 100% eggless options customized to your wishes.</p>
+                        </article>
+
+                        <article class="pillar-card reveal reveal--fade-up" style="--reveal-delay:.3s">
+                            <div class="pillar-card__icon"><i class="fa-solid fa-clock"></i></div>
+                            <h3 class="pillar-card__title">Baked Daily Before Dawn</h3>
+                            <p class="pillar-card__text">Ovens are fired up early morning so you enjoy hot, fresh bakes and crispy savouries straight from the hearth.</p>
+                        </article>
+
+                        <article class="pillar-card reveal reveal--fade-up" style="--reveal-delay:.4s">
+                            <div class="pillar-card__icon"><i class="fa-solid fa-truck-fast"></i></div>
+                            <h3 class="pillar-card__title">Takeout &amp; Delivery</h3>
+                            <p class="pillar-card__text">Fast pickup counters and dependable doorstep delivery across Vickramasingapuram and Ambasamudram.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Animated Stats Counter Section -->
+                <div class="about__stats-wrap" style="margin-top: var(--space-8); padding: var(--space-4); background: var(--color-white); border-radius: var(--radius-md); border: 1px solid var(--color-line); box-shadow: var(--shadow-sm);">
+                    <ul class="about__stats" style="margin: 0;">
+                        <li class="stat">
+                            <p class="stat__value"><span class="stat__number" data-count="100">0</span><span
+                                    class="stat__suffix">%</span></p>
+                            <p class="stat__label">Fresh Cream &amp; Pure Ghee</p>
+                        </li>
+                        <li class="stat">
+                            <p class="stat__value"><span class="stat__number" data-count="60">0</span><span
+                                    class="stat__suffix">+</span></p>
+                            <p class="stat__label">Cakes, Sweets &amp; Bakes</p>
+                        </li>
+                        <li class="stat">
+                            <p class="stat__value"><span class="stat__number" data-count="7">0</span><span
+                                    class="stat__suffix"> Days</span></p>
+                            <p class="stat__label">Open 8:30 AM – 10 PM</p>
+                        </li>
+                        <li class="stat">
+                            <p class="stat__value"><span class="stat__number" data-count="2">0</span><span
+                                    class="stat__suffix"> Options</span></p>
+                            <p class="stat__label">Takeout &amp; Delivery</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="cta" id="reserve">
+            <div class="cta__overlay" aria-hidden="true"></div>
+            <div class="container cta__content reveal reveal--scale">
+                <h2 class="cta__title">Experience the Taste in Person</h2>
+                <p class="cta__text">Visit our boutique on Upper Dam Road or order your custom celebration centerpiece online.</p>
+                <div style="display: flex; gap: var(--space-2); justify-content: center; flex-wrap: wrap;">
+                    <a href="menu.html" class="btn btn--large">Explore Our Menu</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div class="footer__brand">
+                <a href="index.html" class="navbar__logo navbar__logo--footer"
+                    aria-label="Sangeet Bakery And Sweets — back to home">
+                    <img src="assets/cake-logo.jpg" alt="Sangeet Bakery and Sweets Logo" class="navbar__logo-img navbar__logo-img--footer">
+                    <span class="navbar__logo-text">Sangeet <em>Bakery &amp; Sweets</em></span>
+                </a>
+                <p class="footer__tagline">982, Upper Dam Rd, Vickramasingapuram, TN 627425. Custom celebration cakes, hot pizzas &amp; burgers, pure ghee traditional sweets, and crispy tea-time savouries.</p>
+                <div class="footer__social">
+                    <a href="https://www.instagram.com/sangeetbakeryandsweets/" target="_blank" rel="noopener" aria-label="Sangeet Bakery And Sweets on Instagram"><i class="fa-brands fa-instagram"
+                            aria-hidden="true"></i></a>
+                    <a href="tel:+918825543938" aria-label="Call +91 88255 43938"><i class="fa-solid fa-phone"
+                            aria-hidden="true"></i></a>
+                    <a href="tel:+919363204830" aria-label="Call +91 93632 04830"><i class="fa-solid fa-mobile-screen"
+                            aria-hidden="true"></i></a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=982+Ambasamudram+Papanasam+Upper+Dam+Rd+Vickramasingapuram+Tamil+Nadu+627425" target="_blank" rel="noopener" aria-label="Sangeet Bakery on Google Maps"><i class="fa-solid fa-location-dot"
+                            aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <nav class="footer__col" aria-label="Footer quick links">
+                <h3 class="footer__heading">Quick Links</h3>
+                <ul class="footer__list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Our Bakery</a></li>
+                    <li><a href="menu.html">Full Fresh Menu</a></li>
+                    <li><a href="gallery.html">Photo Gallery</a></li>
+                    <li><a href="testimonials.html">Customer Reviews</a></li>
+                    <li><a href="contact.html">Contact &amp; Location</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer__col">
+                <h3 class="footer__heading">Contact &amp; Visit</h3>
+                <ul class="footer__list">
+                    <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 982, Upper Dam Rd, VK Puram 627425</li>
+                    <li><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+918825543938">+91 88255 43938</a></li>
+                    <li><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+919363204830">+91 93632 04830</a></li>
+                    <li><i class="fa-brands fa-instagram" aria-hidden="true"></i> <a href="https://www.instagram.com/sangeetbakeryandsweets/" target="_blank" rel="noopener">@sangeetbakeryandsweets</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h3 class="footer__heading">Hours &amp; Delivery</h3>
+                <ul class="footer__list">
+                    <li>Mon – Sun: <strong>8:30 AM – 10:00 PM</strong></li>
+                    <li>Open All 7 Days</li>
+                    <li>Takeout &amp; Doorstep Delivery</li>
+                    <li class="footer__holiday">VK Puram &amp; Ambasamudram</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p>&copy; <span id="footer-year">2026</span> Sangeet Bakery And Sweets. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Reservation / Order modal -->
+    <div class="modal modal--form" id="reservation-modal" role="dialog" aria-modal="true"
+        aria-labelledby="reservation-title" hidden>
+        <div class="modal__backdrop" data-close-modal></div>
+        <div class="modal__card modal__card--form" role="document">
+            <button class="modal__close" data-close-modal aria-label="Close reservation form"><i
+                    class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+            <div class="modal__body modal__body--form">
+                <p class="section-tag">Inquiry &amp; Order</p>
+                <h3 class="modal__name" id="reservation-title">Custom Cake &amp; Order Inquiry</h3>
+                <p class="modal__desc">Planning a birthday celebration or party order? Send your details or call +91 88255 43938 directly.</p>
+
+                <form id="reservation-form" class="form" novalidate>
+                    <div class="form__row">
+                        <div class="form__field">
+                            <label for="res-name">Full name *</label>
+                            <input type="text" id="res-name" name="name" autocomplete="name" placeholder="Your full name" required>
+                            <span class="form__error" id="res-name-error"></span>
+                        </div>
+                        <div class="form__field">
+                            <label for="res-phone">Phone number *</label>
+                            <input type="tel" id="res-phone" name="phone" autocomplete="tel" placeholder="e.g., +91 88255 43938" maxlength="18" required>
+                            <span class="form__error" id="res-phone-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form__row">
+                        <div class="form__field">
+                            <label for="res-email">Email address *</label>
+                            <input type="email" id="res-email" name="email" autocomplete="email" placeholder="you@example.com" required>
+                            <span class="form__error" id="res-email-error"></span>
+                        </div>
+                        <div class="form__field">
+                            <label for="res-service">Order Service</label>
+                            <select id="res-service" name="service">
+                                <option value="takeout">Takeout / Store Pickup</option>
+                                <option value="delivery">Doorstep Delivery (VK Puram / Ambasamudram)</option>
+                            </select>
+                            <span class="form__error" id="res-service-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form__row">
+                        <div class="form__field">
+                            <label for="res-item">Item / Cake to Order *</label>
+                            <select id="res-item" name="item" required>
+                                <option value="" disabled selected>-- Select an item or cake --</option>
+                                <optgroup label="Cakes &amp; Treats">
+                                    <option value="Custom Birthday Theme Cake">Custom Birthday Theme Cake</option>
+                                    <option value="Classic Black Forest Cake">Classic Black Forest Cake</option>
+                                    <option value="Red Velvet Celebration Pastry">Red Velvet Celebration Pastry / Cake</option>
+                                    <option value="Butterscotch Crunch Cake">Butterscotch Crunch Cake</option>
+                                    <option value="Photo / Cartoon Theme Cake">Photo / Cartoon Theme Cake</option>
+                                    <option value="Multi-Tier Anniversary Cake">Multi-Tier Anniversary Cake</option>
+                                </optgroup>
+                                <optgroup label="Fast Food">
+                                    <option value="Cheesy Paneer Tikka Pizza">Cheesy Paneer Tikka Pizza</option>
+                                    <option value="Crispy Veg Loaded Burger">Crispy Veg Loaded Burger</option>
+                                    <option value="Crispy Chicken Burger">Crispy Chicken Burger</option>
+                                    <option value="Grilled Cheese Club Sandwich">Grilled Cheese Club Sandwich</option>
+                                </optgroup>
+                                <optgroup label="Snacks &amp; Savouries">
+                                    <option value="Crispy Egg Samosas (Party Pack)">Crispy Egg Samosas (Party Pack)</option>
+                                    <option value="Hot Chicken Pepper Puffs">Hot Chicken Pepper Puffs</option>
+                                    <option value="Crispy Vegetable Puffs">Crispy Vegetable Puffs</option>
+                                    <option value="Assorted Tea-Time Savouries">Assorted Tea-Time Savouries</option>
+                                </optgroup>
+                                <optgroup label="Traditional Sweets">
+                                    <option value="Pure Ghee Mysore Pak">Pure Ghee Mysore Pak</option>
+                                    <option value="Tirunelveli Wheat Halwa">Tirunelveli Wheat Halwa</option>
+                                    <option value="Cashew Kaju Katli">Cashew Kaju Katli</option>
+                                    <option value="Assorted Traditional Sweets Box">Assorted Traditional Sweets Box</option>
+                                </optgroup>
+                                <optgroup label="Beverages">
+                                    <option value="KitKat Thick Milkshake">KitKat Thick Milkshake</option>
+                                    <option value="South Indian Filter Coffee">South Indian Filter Coffee</option>
+                                </optgroup>
+                                <option value="Other Custom Order">Other / Custom Order (Specify in Notes)</option>
+                            </select>
+                            <span class="form__error" id="res-item-error"></span>
+                        </div>
+                        <div class="form__field">
+                            <label for="res-guests">Quantity / Weight *</label>
+                            <input type="text" id="res-guests" name="guests" placeholder="e.g., 1 kg / 20 pcs / 2 boxes" value="1 kg" required>
+                            <span class="form__error" id="res-guests-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form__row">
+                        <div class="form__field">
+                            <label for="res-date">Required Date *</label>
+                            <input type="date" id="res-date" name="date" required>
+                            <span class="form__error" id="res-date-error"></span>
+                        </div>
+                        <div class="form__field">
+                            <label for="res-time">Required Time *</label>
+                            <input type="time" id="res-time" name="time" min="08:30" max="22:00" required>
+                            <span class="form__error" id="res-time-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form__field">
+                        <label for="res-notes">Cake Message / Special Instructions (Optional)</label>
+                        <textarea id="res-notes" name="notes" rows="2" placeholder="e.g., Name on cake: 'Happy Birthday Arun', eggless, chocolate flavor, theme photo, or delivery address"></textarea>
+                        <span class="form__error" id="res-notes-error"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn--full btn--whatsapp">
+                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        <span>Submit Inquiry / Order via WhatsApp</span>
+                    </button>
+                    <p class="form__whatsapp-note">
+                        <i class="fa-brands fa-whatsapp" style="color: #25D366;"></i>
+                        Orders are received directly on WhatsApp. Quick confirmation!
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast region -->
+    <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="false"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

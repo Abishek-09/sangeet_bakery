@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Browse the photo gallery of Sangeet Bakery and Sweets in VK Puram. Custom celebration cakes, oven-fresh fast food, pure ghee sweets, and festive highlights.">
+    <title>Photo Gallery | Bakery Creations & Celebrations | Sangeet Bakery and Sweets</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="alternate icon" type="image/jpeg" href="assets/cake-logo.jpg">
+    <link rel="apple-touch-icon" href="assets/cake-logo.jpg">
+
+    <!-- Fonts & icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+        <div class="preloader__inner">
+            <img src="assets/cake-logo.jpg" alt="Sangeet Bakery Logo" class="preloader__logo-img">
+            <span class="preloader__text">Sangeet Bakery And Sweets</span>
+        </div>
+    </div>
+
+    <!-- 1. Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar__container">
+            <a href="index.html" class="navbar__logo" aria-label="Sangeet Bakery And Sweets — home">
+                <img src="assets/cake-logo.jpg" alt="Sangeet Bakery and Sweets Logo" class="navbar__logo-img">
+                <span class="navbar__logo-text">Sangeet <em>Bakery &amp; Sweets</em></span>
+            </a>
+
+            <nav class="navbar__nav" id="nav-menu" aria-label="Primary navigation">
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
+                    <li class="navbar__item"><a href="about.html" class="navbar__link">About</a></li>
+                    <li class="navbar__item"><a href="menu.html" class="navbar__link">Menu</a></li>
+                    <li class="navbar__item"><a href="gallery.html" class="navbar__link is-active">Gallery</a></li>
+                    <li class="navbar__item"><a href="testimonials.html" class="navbar__link">Testimonials</a></li>
+                    <li class="navbar__item"><a href="contact.html" class="navbar__link">Contact</a></li>
+                </ul>
+                <a href="#reserve" class="btn btn--small navbar__cta" data-open-reservation>Custom Order</a>
+            </nav>
+
+            <button class="navbar__toggle" id="nav-toggle" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="nav-menu">
+                <span class="navbar__toggle-bar"></span>
+                <span class="navbar__toggle-bar"></span>
+                <span class="navbar__toggle-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero page-hero--gallery">
+            <div class="container">
+                <div class="page-hero__breadcrumbs reveal reveal--fade-up">
+                    <a href="index.html">Home</a>
+                    <span class="separator"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i></span>
+                    <span>Gallery</span>
+                </div>
+                <h1 class="page-hero__title reveal reveal--fade-up" style="--reveal-delay:.1s">
+                    A Visual Feast of <em>Our Creations</em>
+                </h1>
+                <p class="page-hero__lead reveal reveal--fade-up" style="--reveal-delay:.2s">
+                    Take a peek inside our pastry display cases, bubbling fryers, hot ovens, and happy customer celebration tables across Vickramasingapuram and Ambasamudram.
+                </p>
+            </div>
+        </section>
+
+        <!-- Gallery Grid Section -->
+        <section class="section gallery" id="gallery" style="padding-top: var(--space-6);">
+            <div class="container">
+                <header class="section__header reveal reveal--fade-up">
+                    <p class="section-tag">Crafted With Pride</p>
+                    <h2 class="section-title">Fresh From Our Kitchen</h2>
+                    <p class="section-lead">Click any photograph to view high-resolution details in full screen.</p>
+                </header>
+
+                <!-- Lightbox-enabled Gallery Grid -->
+                <div class="gallery__grid" id="gallery-grid" role="list">
+                    <!-- Populated dynamically by script.js renderGallery() -->
+                </div>
+
+                <!-- Bakery Showcase Spotlight -->
+                <div class="story-grid" style="margin-top: var(--space-8);">
+                    <div class="story-grid__media reveal reveal--slide-left">
+                        <img src="assets/about/about-image-2.jpg"
+                            alt="Freshly baked celebration sponge cakes and pastry craftsmanship at Sangeet Bakery"
+                            class="story-grid__img" loading="lazy" style="height: 380px; object-fit: cover;">
+                    </div>
+                    <div class="story-grid__content reveal reveal--slide-right">
+                        <p class="section-tag">Kitchen Spotlight</p>
+                        <h2 class="section-title">Where Every Cake Tells a Story</h2>
+                        <p class="about__text">
+                            From velvety whipped cream frosting to hand-cut golden samosas and melt-in-mouth Tirunelveli wheat halwa, each bake is prepared under the highest hygiene standards with pure butter, rich cocoa, and farm-fresh cream.
+                        </p>
+                        <p class="about__text">
+                            Whether you need a cartoon theme cake for your child's first birthday or traditional sweets for a family gathering, our kitchen in VK Puram is ready to make it unforgettable.
+                        </p>
+                        <div style="margin-top: var(--space-3); display: flex; gap: var(--space-2); flex-wrap: wrap;">
+                            <a href="menu.html" class="btn btn--primary">View Our Menu</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instagram Community Showcase Banner -->
+                <div class="menu-highlight-banner reveal reveal--fade-up" style="margin-top: var(--space-8); background: linear-gradient(135deg, #421c10, #1f0e08); border-radius: var(--radius-lg); padding: var(--space-6); color: var(--color-white); text-align: center; box-shadow: var(--shadow-lg);">
+                    <i class="fa-brands fa-instagram" style="font-size: 2.8rem; color: var(--color-caramel); margin-bottom: var(--space-2);"></i>
+                    <h3 style="font-family: var(--font-head); font-size: clamp(1.6rem, 1.3rem + 1vw, 2.2rem); margin-bottom: var(--space-2); color: var(--color-white);">Follow Us On Instagram</h3>
+                    <p style="color: rgba(255, 255, 255, 0.85); max-width: 600px; margin-inline: auto; margin-bottom: var(--space-4); line-height: 1.6;">
+                        Join our community! Tag <strong>@sangeetbakeryandsweets</strong> in your birthday celebration and party reels to be featured on our official page.
+                    </p>
+                    <a href="https://www.instagram.com/sangeetbakeryandsweets/" target="_blank" rel="noopener" class="btn btn--primary" style="display: inline-flex; align-items: center; gap: 8px;">
+                        <i class="fa-brands fa-instagram"></i> Follow @sangeetbakeryandsweets
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container footer__grid">
+            <div class="footer__brand">
+                <a href="index.html" class="navbar__logo footer__logo">
+                    <img src="assets/cake-logo.jpg" alt="Sangeet Bakery Logo" class="navbar__logo-img">
+                    <span class="navbar__logo-text">Sangeet <em>Bakery &amp; Sweets</em></span>
+                </a>
+                <p class="footer__tagline">
+                    The premier destination in Vickramasingapuram and Ambasamudram for celebration cakes, traditional ghee sweets, and hot evening savouries.
+                </p>
+                <div class="footer__social" aria-label="Social media">
+                    <a href="https://www.instagram.com/sangeetbakeryandsweets/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://wa.me/918825543938" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <nav class="footer__col" aria-label="Quick links">
+                <h3 class="footer__heading">Quick Links</h3>
+                <ul class="footer__list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Our Bakery</a></li>
+                    <li><a href="menu.html">Full Fresh Menu</a></li>
+                    <li><a href="gallery.html">Photo Gallery</a></li>
+                    <li><a href="testimonials.html">Customer Reviews</a></li>
+                    <li><a href="contact.html">Contact &amp; Location</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer__col">
+                <h3 class="footer__heading">Contact &amp; Visit</h3>
+                <ul class="footer__list">
+                    <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 982, Upper Dam Rd, VK Puram 627425</li>
+                    <li><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+918825543938">+91 88255 43938</a></li>
+                    <li><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+919363204830">+91 93632 04830</a></li>
+                    <li><i class="fa-brands fa-instagram" aria-hidden="true"></i> <a href="https://www.instagram.com/sangeetbakeryandsweets/" target="_blank" rel="noopener">@sangeetbakeryandsweets</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h3 class="footer__heading">Hours &amp; Delivery</h3>
+                <ul class="footer__list">
+                    <li>Mon – Sun: <strong>8:30 AM – 10:00 PM</strong></li>
+                    <li>Open All 7 Days</li>
+                    <li>Takeout &amp; Doorstep Delivery</li>
+                    <li class="footer__holiday">VK Puram &amp; Ambasamudram</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p>&copy; <span id="footer-year">2026</span> Sangeet Bakery And Sweets. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery image lightbox" hidden>
+        <button class="lightbox__close" data-close-lightbox aria-label="Close lightbox"><i class="fa-solid fa-xmark"
+                aria-hidden="true"></i></button>
+        <button class="lightbox__arrow lightbox__arrow--prev" id="lightbox-prev" aria-label="Previous image"><i
+                class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+        <figure class="lightbox__figure">
+            <img id="lightbox-img" src="" alt="">
+            <figcaption id="lightbox-caption"></figcaption>
+        </figure>
+        <button class="lightbox__arrow lightbox__arrow--next" id="lightbox-next" aria-label="Next image"><i
+                class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+    </div>
+
+    <!-- Reservation / Order modal -->
+    <div class="modal modal--form" id="reservation-modal" role="dialog" aria-modal="true"
+        aria-labelledby="reservation-title" hidden>
+        <div class="modal__backdrop" data-close-modal></div>
+        <div class="modal__card modal__card--form" role="document">
+            <button class="modal__close" data-close-modal aria-label="Close reservation form"><i
+                    class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+            <div class="modal__body modal__body--form">
+                <p class="section-tag">Inquiry &amp; Order</p>
+                <h3 class="modal__name" id="reservation-title">Custom Cake &amp; Order Inquiry</h3>
+                <p class="modal__desc">Planning a birthday celebration or party order? Send your details or call +91 88255 43938 directly.</p>
+
+                <form id="reservation-form" class="form" novalidate>
+                    <div class="form__row">
+                        <div class="form__field">
+                            <label for="res-name">Full name *</label>
+                            <input type="text" id="res-name" name="name" autocomplete="name" placeholder="Your full name" required>
+                            <span class="form__error" id="res-name-error"></span>
+                        </div>
+                        <div class="form__field">
+                            <label for="res-phone">Phone number *</label>
+                            <input type="tel" id="res-phone" name="phone" autocomplete="tel" placeholder="e.g., +91 88255 43938" maxlength="18" required>
+                            <span class="form__error" id="res-phone-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form__row">
+                        <div class="form__field">
+                            <label for="res-email">Email address *</label>
+                            <input type="email" id="res-email" name="email" autocomplete="email" placeholder="you@example.com" required>
+                            <span class="form__error" id="res-email-error"></span>
+                        </div>
+                        <div class="form__field">
+                            <label for="res-service">Order Service</label>
+                            <select id="res-service" name="service">
+                                <option value="takeout">Takeout / Store Pickup</option>
+                                <option value="delivery">Doorstep Delivery (VK Puram / Ambasamudram)</option>
+                            </select>
+                            <span class="form__error" id="res-service-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form__row">
+                        <div class="form__field">
+                            <label for="res-item">Item / Cake to Order *</label>
+                            <select id="res-item" name="item" required>
+                                <option value="" disabled selected>-- Select an item or cake --</option>
+                                <optgroup label="Cakes &amp; Treats">
+                                    <option value="Custom Birthday Theme Cake">Custom Birthday Theme Cake</option>
+                                    <option value="Classic Black Forest Cake">Classic Black Forest Cake</option>
+                                    <option value="Red Velvet Celebration Pastry">Red Velvet Celebration Pastry / Cake</option>
+                                    <option value="Butterscotch Crunch Cake">Butterscotch Crunch Cake</option>
+                                    <option value="Photo / Cartoon Theme Cake">Photo / Cartoon Theme Cake</option>
+                                    <option value="Multi-Tier Anniversary Cake">Multi-Tier Anniversary Cake</option>
+                                </optgroup>
+                                <optgroup label="Fast Food">
+                                    <option value="Cheesy Paneer Tikka Pizza">Cheesy Paneer Tikka Pizza</option>
+                                    <option value="Crispy Veg Loaded Burger">Crispy Veg Loaded Burger</option>
+                                    <option value="Crispy Chicken Burger">Crispy Chicken Burger</option>
+                                    <option value="Grilled Cheese Club Sandwich">Grilled Cheese Club Sandwich</option>
+                                </optgroup>
+                                <optgroup label="Snacks &amp; Savouries">
+                                    <option value="Crispy Egg Samosas (Party Pack)">Crispy Egg Samosas (Party Pack)</option>
+                                    <option value="Hot Chicken Pepper Puffs">Hot Chicken Pepper Puffs</option>
+                                    <option value="Crispy Vegetable Puffs">Crispy Vegetable Puffs</option>
+                                    <option value="Assorted Tea-Time Savouries">Assorted Tea-Time Savouries</option>
+                                </optgroup>
+                                <optgroup label="Traditional Sweets">
+                                    <option value="Pure Ghee Mysore Pak">Pure Ghee Mysore Pak</option>
+                                    <option value="Tirunelveli Wheat Halwa">Tirunelveli Wheat Halwa</option>
+                                    <option value="Cashew Kaju Katli">Cashew Kaju Katli</option>
+                                    <option value="Assorted Traditional Sweets Box">Assorted Traditional Sweets Box</option>
+                                </optgroup>
+                                <optgroup label="Beverages">
+                                    <option value="KitKat Thick Milkshake">KitKat Thick Milkshake</option>
+                                    <option value="South Indian Filter Coffee">South Indian Filter Coffee</option>
+                                </optgroup>
+                                <option value="Other Custom Order">Other / Custom Order (Specify in Notes)</option>
+                            </select>
+                            <span class="form__error" id="res-item-error"></span>
+                        </div>
+                        <div class="form__field">
+                            <label for="res-guests">Quantity / Weight *</label>
+                            <input type="text" id="res-guests" name="guests" placeholder="e.g., 1 kg / 20 pcs / 2 boxes" value="1 kg" required>
+                            <span class="form__error" id="res-guests-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form__row">
+                        <div class="form__field">
+                            <label for="res-date">Required Date *</label>
+                            <input type="date" id="res-date" name="date" required>
+                            <span class="form__error" id="res-date-error"></span>
+                        </div>
+                        <div class="form__field">
+                            <label for="res-time">Required Time *</label>
+                            <input type="time" id="res-time" name="time" min="08:30" max="22:00" required>
+                            <span class="form__error" id="res-time-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form__field">
+                        <label for="res-notes">Cake Message / Special Instructions (Optional)</label>
+                        <textarea id="res-notes" name="notes" rows="2" placeholder="e.g., Name on cake: 'Happy Birthday Arun', eggless, chocolate flavor, theme photo, or delivery address"></textarea>
+                        <span class="form__error" id="res-notes-error"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn--full btn--whatsapp">
+                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        <span>Submit Inquiry / Order via WhatsApp</span>
+                    </button>
+                    <p class="form__whatsapp-note">
+                        <i class="fa-brands fa-whatsapp" style="color: #25D366;"></i>
+                        Orders are received directly on WhatsApp. Quick confirmation!
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast region -->
+    <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="false"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
