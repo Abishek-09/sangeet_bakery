@@ -231,6 +231,7 @@ function initNavbar() {
         if (!toggle || !navMenu) return;
         toggle.classList.toggle('is-open', open);
         navMenu.classList.toggle('is-open', open);
+        navbar.classList.toggle('is-menu-open', open);
         toggle.setAttribute('aria-expanded', String(open));
         toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
         document.body.classList.toggle('no-scroll', open);

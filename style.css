@@ -374,12 +374,20 @@ button {
     box-shadow: var(--shadow-md);
 }
 
+.navbar.is-menu-open {
+    background: var(--color-cream) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+}
+
 .navbar.is-scrolled .navbar__container {
     min-height: 64px;
 }
 
 .navbar.is-scrolled .navbar__link,
-.navbar.is-scrolled .navbar__logo-text {
+.navbar.is-scrolled .navbar__logo-text,
+.navbar.is-menu-open .navbar__logo-text {
     color: var(--color-dark);
 }
 
@@ -2048,45 +2056,104 @@ button {
         padding-block: var(--space-8);
     }
 
+    /* Prevent containing block trapping on mobile */
+    .navbar,
+    .navbar.is-scrolled {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+    .navbar.is-scrolled {
+        background: var(--color-cream);
+    }
+
+    .navbar__logo {
+        position: relative;
+        z-index: 105;
+    }
+
     /* Mobile nav: hamburger + sliding panel */
     .navbar__toggle {
         display: flex;
+        position: relative;
+        z-index: 105;
     }
 
     .navbar__nav {
         position: fixed;
-        inset: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh;
         z-index: 101;
+        display: flex;
         flex-direction: column;
-        justify-content: center;
-        gap: var(--space-4);
-        background: rgba(255, 248, 240, .98);
-        backdrop-filter: blur(12px);
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        padding-top: calc(var(--navbar-h) + 24px);
+        padding-bottom: 40px;
+        padding-inline: 24px;
+        background: var(--color-cream);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
         opacity: 0;
         visibility: hidden;
-        transform: translateY(-12px);
+        pointer-events: none;
+        transform: translateY(-10px);
         transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
     }
 
     .navbar__nav.is-open {
         opacity: 1;
         visibility: visible;
+        pointer-events: auto;
         transform: translateY(0);
     }
 
     .navbar__list {
+        display: flex;
         flex-direction: column;
-        gap: var(--space-3);
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
     }
 
     .navbar__link {
         color: var(--color-dark);
-        font-size: 1.4rem;
+        font-size: 1.35rem;
         font-family: var(--font-head);
+        font-weight: 600;
+        padding: 8px 16px;
+        display: inline-block;
+        transition: color var(--transition), transform var(--transition);
+    }
+
+    .navbar__link:hover,
+    .navbar__link.is-active {
+        color: var(--color-terracotta);
+    }
+
+    .navbar__link::after {
+        display: none;
     }
 
     .navbar__cta {
-        margin-top: var(--space-2);
+        margin-top: 10px;
+        width: min(100%, 260px);
+        min-height: 46px;
+        padding: 12px 28px;
+        font-size: 1rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .about__grid,
