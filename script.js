@@ -994,15 +994,42 @@ function initFaqAccordion() {
     });
 }
 
-/* --------------------- 16. Video Players Auto-Pause (About Page) -------- */
+/* --------------------- 16. Video Players Auto-Pause & First-Frame Preview -------- */
 function initVideoPlayers() {
     const videos = $$('video');
     videos.forEach(vid => {
+        // Pause other playing videos when one starts
         vid.addEventListener('play', () => {
             videos.forEach(other => {
                 if (other !== vid && !other.paused) other.pause();
             });
         });
+
+        // Capture genuine first frame as poster for mobile/low-power modes
+        const captureFirstFrame = () => {
+            if (!vid.getAttribute('poster') && vid.videoWidth && vid.videoHeight) {
+                try {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = vid.videoWidth;
+                    canvas.height = vid.videoHeight;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(vid, 0, 0, canvas.width, canvas.height);
+                    const posterUrl = canvas.toDataURL('image/jpeg', 0.88);
+                    if (posterUrl && posterUrl.length > 500) {
+                        vid.setAttribute('poster', posterUrl);
+                    }
+                } catch (e) {
+                    // Native media fragment handles preview
+                }
+            }
+        };
+
+        if (vid.readyState >= 2) {
+            captureFirstFrame();
+        } else {
+            vid.addEventListener('loadeddata', captureFirstFrame, { once: true });
+            vid.addEventListener('seeked', captureFirstFrame, { once: true });
+        }
     });
 }
 
